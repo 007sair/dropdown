@@ -1,0 +1,195 @@
+/* -------------------------------- 
+
+Reset style
+
+-------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: Arial;
+    background-color: #fff;
+}
+a {
+    color: #DB6356;
+    text-decoration: none;
+}
+
+
+
+/* -------------------------------- 
+
+ Styles
+
+-------------------------------- */
+.cd-morph-dropdown {
+    position: relative;
+    height: 80px;
+    padding: 0;
+    text-align: center;
+}
+.cd-morph-dropdown .morph-dropdown-wrapper {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1.2em 5%;
+    box-shadow: inset 0 1px 0 #e6e6e6;
+    background-color: #548c7e;
+}
+.cd-morph-dropdown::before {
+    content: 'desktop';
+    display: none;
+}
+.cd-morph-dropdown .main-nav {
+    display: inline-block;
+}
+.cd-morph-dropdown .main-nav > ul > li {
+    display: inline-block;
+}
+.cd-morph-dropdown .main-nav > ul > li > a {
+    display: block;
+    padding: 0 1.8em;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.8rem;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-transition: opacity .2s;
+    transition: opacity .2s;
+}
+.cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li > a {
+    /* main navigation hover effect - on hover, reduce opacity of elements not hovered over */
+    opacity: .6;
+}
+.cd-morph-dropdown.is-dropdown-visible .main-nav > ul > li.active > a {
+    opacity: 1;
+}
+.cd-morph-dropdown .morph-dropdown-wrapper {
+    /* dropdown wrapper - used to create the slide up/slide down effect when dropdown is revealed/hidden */
+    display: block;
+    top: 58px;    /* overwrite mobile style */
+    width: auto;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;    /* Force Hardware acceleration */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.cd-morph-dropdown.is-dropdown-visible .morph-dropdown-wrapper {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+}
+.cd-morph-dropdown .dropdown-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform, width, height;
+    -webkit-transition: visibility .3s;
+    transition: visibility .3s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    background: #548c7e;
+    color: #fff;
+}
+.cd-morph-dropdown .dropdown-list::before {
+    /* dropdown top triangle */
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    right: auto;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-bottom-color: #548c7e;
+    opacity: 0;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+.cd-morph-dropdown .dropdown-list > ul {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.cd-morph-dropdown.is-dropdown-visible .dropdown-list {
+    visibility: visible;
+    -webkit-transition: width .3s, height .3s, -webkit-transform .3s;
+    transition: width .3s, height .3s, -webkit-transform .3s;
+    transition: transform .3s, width .3s, height .3s;
+    transition: transform .3s, width .3s, height .3s, -webkit-transform .3s;
+}
+.cd-morph-dropdown.is-dropdown-visible .dropdown-list::before {
+    opacity: 1;
+}
+.cd-morph-dropdown .dropdown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    -webkit-transition: opacity .3s, visibility .3s;
+    transition: opacity .3s, visibility .3s;
+}
+.cd-morph-dropdown .dropdown.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cd-morph-dropdown .content {
+    padding: 20px;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+    text-align: left;
+}
+.cd-morph-dropdown .content > ul::after {
+    clear: both;
+    content: "";
+    display: block;
+}
+.cd-morph-dropdown .content > ul > li {
+    width: 48%;
+    float: left;
+    margin-right: 4%;
+    margin-top: 0;
+}
+.cd-morph-dropdown .content > ul > li:nth-of-type(2n) {
+    margin-right: 0;
+}
+.cd-main-content {
+    text-align: center;
+}
+
+.b-form .content {
+    width: 510px;
+}
+.b-table .content {
+    width: 600px;
+}
+

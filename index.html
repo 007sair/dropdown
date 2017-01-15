@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css"> <!-- bootstrap style -->
+	<link rel="stylesheet" href="css/style.css"> <!-- Resource style -->
+	<title>下拉demo</title>
+</head>
+<style>
+
+</style>
+<body>
+
+	<div class="cd-morph-dropdown">
+
+		<div class="main-nav">
+			<ul>
+				<li class="has-dropdown" data-content="tabel">
+					<a href="#1">Tabel</a>
+				</li>
+				<li class="has-dropdown" data-content="form">
+					<a href="#0">Form</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="morph-dropdown-wrapper">
+			<div class="dropdown-list">
+				<ul>
+					<li id="tabel" class="dropdown b-table">
+						<div class="content">
+							<table class="table" style="display: ;">
+								<caption>Optional table caption.</caption>
+								<thead>
+									<tr>
+										<th>#</th>
+										<th>First Name</th>
+										<th>Last Name</th>
+										<th>Username</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>1</td>
+										<td>Mark</td>
+										<td>Otto</td>
+										<td>@mdo</td>
+									</tr>
+									<tr>
+										<td>2</td>
+										<td>Jacob</td>
+										<td>Thornton</td>
+										<td>@fat</td>
+									</tr>
+									<tr>
+										<td>3</td>
+										<td>Larry</td>
+										<td>the Bird</td>
+										<td>@twitter</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</li>
+					<li id="form" class="dropdown b-form">
+						<div class="content">
+							<form role="form">
+								<div class="form-group">
+									<label for="exampleInputEmail1">Email address</label>
+									<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email"></div>
+								<div class="form-group">
+									<label for="exampleInputPassword1">Password</label>
+									<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"></div>
+								<div class="form-group">
+									<label for="exampleInputFile">File input</label>
+									<input type="file" id="exampleInputFile">
+									<p class="help-block">Example block-level help text here.</p>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox">Check me out</label>
+								</div>
+								<button type="submit" class="btn btn-default">Submit</button>
+							</form>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- dropdown-list -->
+		</div>
+		<!-- morph-dropdown-wrapper -->
+	</div>
+
+	<div class="cd-main-content">其他元素，测试移入的元素是否悬浮~~~</div>
+
+	<script src="http://cdn.bootcss.com/jquery/1.8.3/jquery.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
